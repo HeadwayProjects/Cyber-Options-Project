@@ -1,0 +1,54 @@
+{% extends 'base01.html' %}
+{% block content %}
+
+        <!-- Courses start -->
+        <section class="special_cource padding_top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5">
+                        <div class="section_tittle text-center">
+                            <p>popular courses</p>
+                            <h2>Special Courses</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for x in course %}
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="single_special_cource">
+                            <img src="./static/img/4.jpg" class="special_img" alt="">
+                            <div class="special_cource_text">
+                                <a href="#" class="btn_4">{{x.category}}</a>
+                                <h4>{{x.course_price}}</h4>
+                                <a href="#"><h3>{{x.course_name}}</h3></a>
+                                {% comment %} <p>Which whose darkness saying were life unto fish wherein all fish of together called</p> {% endcomment %}
+                                <a href="#" class="btn_1">View More</a>
+                                {% comment %} <div class="author_info">
+                                    <div class="author_img">
+                                        <img src="./static/img/author/author_1.png" /> 
+                                        <div class="author_info_text">
+                                            <p>Conduct by:</p>
+                                            <h5><a href="#">James Well</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="author_rating">
+                                        <div class="rating">
+                                            <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                            <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                            <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                            <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                            <a href="#"><img src="img/icon/star.svg" alt=""></a>
+                                        </div>
+                                        <p>3.8 Ratings</p>
+                                    </div>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- Courses  end::-->
+
+{% endblock %}
